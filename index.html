@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Origo Estúdio — Vídeo profissional pro seu negócio</title>
+<meta name="description" content="Vídeos profissionais pras redes do seu negócio, prontos em poucos dias e por um preço justo. Peça o seu, pague por Pix e fale direto comigo no WhatsApp.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="#topo">
+      <img src="assets/logo-mark.svg" alt="Origo Estúdio">
+      <span>Origo Estúdio</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#portfolio">Portfólio</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#pedido">Fazer pedido</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://wa.me/5527997656489?text=Oi%2C%20Alef!%20Vim%20pelo%20site%20da%20Origo%20e%20queria%20saber%20mais." target="_blank" rel="noopener">WhatsApp</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="topo">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Origo Estúdio · Grande Vitória, ES</span>
+        <h1>Vídeo profissional não precisa ser <em>complicado.</em><br>Nem caro.</h1>
+        <p class="lede">A gente produz vídeo pro seu negócio aparecer bonito nas redes — rápido, no estilo e nas cores da sua marca, por um preço que cabe no bolso de quem está começando.</p>
+        <div class="hero-cta">
+          <a href="#pedido" class="btn btn-primary">Pedir meu vídeo</a>
+          <a href="#portfolio" class="btn btn-ghost-light">Ver exemplos</a>
+        </div>
+        <div class="hero-trust">
+          <div>💬 <span><strong>Você fala comigo</strong>, direto no WhatsApp</span></div>
+          <div>💳 <span><strong>Pix na hora</strong>, sem taxa escondida</span></div>
+          <div>⚡ <span><strong>Entrega rápida</strong>, poucos dias úteis</span></div>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <span class="tag">Exemplo · Barbearia</span>
+        <h3>Vídeo de transformação, pronto pra postar</h3>
+        <video src="assets/video/barbearia.mp4" muted loop playsinline preload="metadata"></video>
+        <p class="caption">Passe o mouse ou toque no vídeo pra assistir. Mais exemplos no portfólio abaixo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Do jeito mais simples possível</h2>
+        <p>Três passos, sem burocracia. Você conversa comigo, não com um formulário automático.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="num">01</span>
+          <h3>Você me conta sobre o seu negócio</h3>
+          <p>Preenche o pedido aqui no site (ou me chama direto no WhatsApp) com fotos, referências e o que você quer mostrar.</p>
+        </div>
+        <div class="step">
+          <span class="num">02</span>
+          <h3>Eu produzo o vídeo</h3>
+          <p>Uso tecnologia de inteligência artificial de ponta pra montar as cenas no estilo e nas cores da sua marca — é isso que deixa o processo rápido e o preço baixo, sem parecer amador.</p>
+        </div>
+        <div class="step">
+          <span class="num">03</span>
+          <h3>Você aprova e recebe pronto</h3>
+          <p>Primeira revisão inclusa. Ajustamos até ficar do seu jeito, você recebe o arquivo final e já pode postar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" style="background:var(--paper-soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Portfólio</span>
+        <h2>Exemplos do estilo Origo</h2>
+        <p>Peças de demonstração feitas pra mostrar o que dá pra fazer em cada tipo de negócio. Toque num vídeo pra assistir com som.</p>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- injected by JS -->
+      </div>
+      <p class="portfolio-note">Essas peças são demonstrações de estilo produzidas pela Origo, não trabalhos encomendados por clientes reais — servem pra você ver o padrão de qualidade antes de pedir o seu.</p>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <div class="lightbox-inner">
+      <video id="lightboxVideo" controls playsinline></video>
+      <div class="lightbox-meta">
+        <strong id="lightboxTitle"></strong>
+        <a class="btn btn-primary btn-block" id="lightboxCta" target="_blank" rel="noopener">Quero um vídeo assim pro meu negócio</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Serviços</span>
+        <h2>Duas formas de crescer online</h2>
+        <p>Vídeo pra suas redes sociais e um site personalizado pro seu negócio — os dois com a mesma cara profissional.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card dark">
+          <span class="service-kicker">Vídeos pra redes sociais</span>
+          <h3>Cardápio de vídeos</h3>
+          <p class="desc">Escolha a duração e a quantidade. Quanto mais vídeo no pacote, menor o preço de cada peça. Pacote máximo de 15 vídeos por mês.</p>
+          <table class="price-table">
+            <thead>
+              <tr><th>Pacote</th><th>20s</th><th>30s</th><th>1 min</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1 vídeo</td><td>R$ 20</td><td>R$ 30</td><td>R$ 50</td></tr>
+              <tr><td>3 vídeos</td><td>R$ 50</td><td>R$ 80</td><td>R$ 140</td></tr>
+              <tr><td>6 vídeos</td><td>R$ 100</td><td>R$ 150</td><td>R$ 260</td></tr>
+              <tr><td>10 vídeos</td><td>R$ 150</td><td>R$ 220</td><td>R$ 380</td></tr>
+              <tr class="best"><td>15 vídeos</td><td>R$ 200</td><td>R$ 300</td><td>R$ 500</td></tr>
+            </tbody>
+          </table>
+          <p class="price-note">Também aceito permuta com alguns tipos de negócio (pet shop, loja de roupa, material de construção). Combine antes pelo WhatsApp.</p>
+          <div class="badge-row">
+            <span class="badge">Sem letra miúda</span>
+            <span class="badge">1ª revisão inclusa</span>
+            <span class="badge">Sem fidelidade</span>
+          </div>
+          <div class="cta"><a href="#pedido" class="btn btn-primary btn-block">Montar meu pacote de vídeos</a></div>
+        </div>
+
+        <div class="service-card light">
+          <span class="service-kicker">Presença online</span>
+          <h3>Personalização de site</h3>
+          <p class="desc">Uma página como esta, sob medida pro seu negócio: sua marca, suas cores, seus vídeos e um jeito direto do cliente pedir e pagar.</p>
+          <ul class="feature-list">
+            <li>Design personalizado com sua identidade visual</li>
+            <li>Site rápido, responsivo e pronto pra celular</li>
+            <li>Botão de WhatsApp e formulário de pedido integrados</li>
+            <li>Orientação de domínio e publicação</li>
+            <li>Ajustes de texto e conteúdo inclusos no fechamento</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">Orçamento sob consulta</span>
+          </div>
+          <div class="cta">
+            <a href="https://wa.me/5527997656489?text=Oi%2C%20Alef!%20Quero%20um%20or%C3%A7amento%20pra%20personalizar%20um%20site%20pro%20meu%20neg%C3%B3cio." target="_blank" rel="noopener" class="btn btn-dark btn-block">Pedir orçamento do site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEDIDO -->
+  <section id="pedido" style="background:var(--paper-soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Fazer pedido</span>
+        <h2>Monta aqui o seu pedido</h2>
+        <p>Preenche os dados, veja o preço na hora e pague por Pix direto aqui no site. Depois é só confirmar comigo no WhatsApp.</p>
+      </div>
+
+      <div class="order-wrap">
+        <div class="order-tabs">
+          <button class="order-tab active" data-tab="video">Vídeo pra redes sociais</button>
+          <button class="order-tab" data-tab="site">Personalização de site</button>
+        </div>
+
+        <form id="orderForm" class="order-body" action="https://formsubmit.co/alefribeiroadm@gmail.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Novo pedido — Origo Estúdio">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="obrigado.html">
+          <input type="hidden" name="Tipo de pedido" id="tipoPedidoField" value="Vídeo pra redes sociais">
+
+          <div>
+            <div class="field" data-video-field>
+              <label>Tipo de negócio</label>
+              <select name="Tipo de negócio">
+                <option>Barbearia</option>
+                <option>Restaurante / moqueca / frutos do mar</option>
+                <option>Farmácia de bairro</option>
+                <option>Pet shop / clínica veterinária</option>
+                <option>Loja de roupa</option>
+                <option>Casa de show / bar com música ao vivo</option>
+                <option>Clínica odontológica / estética</option>
+                <option>Academia / estúdio fitness</option>
+                <option>Pousada / turismo</option>
+                <option>Imobiliária / corretor</option>
+                <option>Advocacia</option>
+                <option>Igreja / evento religioso</option>
+                <option>Outro tipo de negócio</option>
+              </select>
+            </div>
+
+            <div class="field" data-video-field>
+              <label>Duração do vídeo</label>
+              <div class="chip-group" id="durationChips">
+                <button type="button" class="chip active" data-duration="20">20 segundos</button>
+                <button type="button" class="chip" data-duration="30">30 segundos</button>
+                <button type="button" class="chip" data-duration="60">1 minuto</button>
+              </div>
+            </div>
+
+            <div class="field" data-video-field>
+              <label>Quantos vídeos</label>
+              <div class="chip-group" id="qtyChips">
+                <button type="button" class="chip active" data-qty="1">1</button>
+                <button type="button" class="chip" data-qty="3">3</button>
+                <button type="button" class="chip" data-qty="6">6</button>
+                <button type="button" class="chip" data-qty="10">10</button>
+                <button type="button" class="chip" data-qty="15">15 — melhor custo</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Nome do negócio</label>
+              <input type="text" name="Nome do negócio" required>
+            </div>
+
+            <div class="row-2">
+              <div class="field">
+                <label>Seu nome</label>
+                <input type="text" name="Seu nome" required>
+              </div>
+              <div class="field">
+                <label>WhatsApp pra contato</label>
+                <input type="tel" name="WhatsApp" placeholder="(27) 9____-____" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>E-mail (opcional)</label>
+              <input type="email" name="E-mail">
+            </div>
+
+            <div class="field">
+              <label id="briefingLabel">Conte sobre o seu negócio e o que você imagina pro vídeo</label>
+              <textarea name="Briefing" placeholder="Ex: barbearia no centro de Cariacica, quero um vídeo de antes/depois de corte, tom jovem e moderno..." required></textarea>
+            </div>
+
+            <div class="field">
+              <label>Anexar fotos, logo ou referências</label>
+              <input type="file" name="Anexos[]" multiple accept="image/*,video/*,.pdf">
+              <p class="hint">Manda fotos do seu negócio, sua logo ou vídeos que você curtiu como referência.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="summary-box" data-video-field>
+              <span class="label">Total do pedido</span>
+              <div class="price"><span id="summaryPrice">R$ 20</span> <small id="summaryPriceUnit">/ 1 vídeo de 20s</small></div>
+              <div class="summary-line"><span>Duração</span><strong id="summaryDuration">20 segundos</strong></div>
+              <div class="summary-line"><span>Quantidade</span><strong id="summaryQty">1 vídeo</strong></div>
+              <div class="summary-line"><span>Preço por vídeo</span><strong id="summaryUnit">R$ 20,00</strong></div>
+
+              <div class="pix-box">
+                <h4>Pagamento via Pix</h4>
+                <div class="pix-qr">
+                  <div id="qrcode"></div>
+                  <div class="pix-copy">
+                    <p class="hint" style="margin-top:0;">Escaneie o QR Code ou copie o código abaixo no seu app do banco.</p>
+                    <p class="key" id="pixCode"></p>
+                    <button type="button" class="copy-btn" id="copyPixBtn">Copiar código Pix</button>
+                  </div>
+                </div>
+                <p class="pix-holder">Chave: (27) 99765-6489 · Alef Ribeiro Alves · Santander</p>
+              </div>
+
+              <div class="field" style="margin-top:18px;">
+                <label style="color:var(--paper);">Comprovante do Pix (se já pagou)</label>
+                <input type="file" name="Comprovante Pix" accept="image/*,.pdf">
+              </div>
+            </div>
+
+            <div class="summary-box" data-site-field style="display:none;">
+              <span class="label">Personalização de site</span>
+              <div class="price" style="font-size:26px;">Orçamento sob consulta</div>
+              <p style="margin-top:14px;font-size:14px;color:var(--muted-dark);">Preencha o briefing ao lado com o que você precisa (páginas, funcionalidades, referências de site que você gosta) e eu te retorno com um valor pelo WhatsApp ou e-mail.</p>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-block">Enviar pedido</button>
+              <a href="https://wa.me/5527997656489" target="_blank" rel="noopener" id="waFallback" class="btn btn-ghost btn-block">Prefiro chamar no WhatsApp</a>
+              <p class="form-note">Ao enviar, o pedido chega direto no meu e-mail com seus anexos. Depois de pagar o Pix, me manda o comprovante por aqui ou pelo WhatsApp pra eu já entrar na fila de produção.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIANÇA -->
+  <section class="trust-section" id="contato">
+    <div class="container trust-grid">
+      <div class="trust-card">
+        <div class="trust-monogram"><img src="assets/logo-mark.svg" alt=""></div>
+        <h3>Alef Ribeiro</h3>
+        <p class="role">Fundador da Origo Estúdio · Cariacica / Grande Vitória — ES</p>
+        <p>Não sou uma agência grande nem uma central de atendimento. É eu mesmo quem conversa, produz e entrega cada vídeo — por isso dá pra falar direto comigo em qualquer etapa do pedido.</p>
+        <div class="trust-contacts">
+          <a href="https://wa.me/5527997656489" target="_blank" rel="noopener">💬 (27) 99765-6489 — WhatsApp</a>
+          <a href="mailto:alefribeiroadm@gmail.com">✉️ alefribeiroadm@gmail.com</a>
+        </div>
+        <div class="social-row">
+          <a class="btn btn-ghost" href="https://www.instagram.com/origoestudiobr/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn btn-ghost" href="https://www.tiktok.com/@origoestudiobr" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div class="trust-points">
+        <span class="eyebrow">Por que confiar na Origo</span>
+        <div class="trust-point">
+          <span class="n">01</span>
+          <div><h4>Preço aberto, sem letra miúda</h4><p>O valor que você vê no cardápio é o valor que você paga. Nada de "orçamento sob consulta" pra vídeo — só pro site, que é mesmo sob medida.</p></div>
+        </div>
+        <div class="trust-point">
+          <span class="n">02</span>
+          <div><h4>Pagamento simples, direto pra minha conta</h4><p>Pix pra chave (27) 99765-6489, em nome de Alef Ribeiro Alves, no Santander. Sem intermediário, sem gateway de terceiro.</p></div>
+        </div>
+        <div class="trust-point">
+          <span class="n">03</span>
+          <div><h4>Transparência sobre como o vídeo é feito</h4><p>Os vídeos são produzidos com tecnologia de inteligência artificial de última geração — é isso que permite entregar rápido e cobrar barato, sem abrir mão de qualidade profissional.</p></div>
+        </div>
+        <div class="trust-point">
+          <span class="n">04</span>
+          <div><h4>Revisão inclusa, sem fidelidade</h4><p>Se algo não ficou do seu jeito, ajustamos antes de entregar. E você fecha o pacote que quiser, sem compromisso de renovar.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="container footer-grid">
+    <a class="brand" href="#topo"><img src="assets/logo-mark.svg" alt="" style="height:22px;filter:invert(1) brightness(2);"><span>Origo Estúdio</span></a>
+    <div class="footer-links">
+      <a href="#portfolio">Portfólio</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#pedido">Pedido</a>
+      <a href="privacidade.html">Privacidade</a>
+    </div>
+    <span>© 2026 Origo Estúdio — Alef Ribeiro Alves</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5527997656489?text=Oi%2C%20Alef!%20Vim%20pelo%20site%20da%20Origo." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">💬</a>
+
+<script src="js/qrcode.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

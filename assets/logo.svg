@@ -1,0 +1,56 @@
+<svg viewBox="0 0 1200 820" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;display=swap');
+      .display { font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; }
+      .caption { font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; font-weight: 500; letter-spacing: 0.42em; }
+      .label { font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; font-weight: 500; letter-spacing: 0.04em; }
+    </style>
+  </defs>
+
+  <!-- ============ MARK DEFINITION (reused via <use>) ============ -->
+  <defs>
+    <g id="mark-accent">
+      <path d="M 67.16 91.20 A 34 34 0 0 1 130.81 85.63" fill="none" stroke="#FF3D1F" stroke-width="9" stroke-linecap="round"/>
+      <path d="M 84.99 43.98 A 58 58 0 0 1 147.51 133.27" fill="none" stroke="#FF3D1F" stroke-width="7" stroke-linecap="round" opacity="0.62"/>
+      <path d="M 164.35 46.01 A 84 84 0 0 1 78.26 181.14" fill="none" stroke="#FF3D1F" stroke-width="5" stroke-linecap="round" opacity="0.32"/>
+      <circle cx="100" cy="100" r="15" fill="#FF3D1F"/>
+    </g>
+    <g id="mark-ink">
+      <path d="M 67.16 91.20 A 34 34 0 0 1 130.81 85.63" fill="none" stroke="#14140F" stroke-width="9" stroke-linecap="round"/>
+      <path d="M 84.99 43.98 A 58 58 0 0 1 147.51 133.27" fill="none" stroke="#14140F" stroke-width="7" stroke-linecap="round" opacity="0.55"/>
+      <path d="M 164.35 46.01 A 84 84 0 0 1 78.26 181.14" fill="none" stroke="#14140F" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
+      <circle cx="100" cy="100" r="15" fill="#FF3D1F"/>
+    </g>
+  </defs>
+
+  <!-- ============ CARD 1 — versão sobre fundo escuro ============ -->
+  <rect x="60" y="60" width="520" height="460" rx="26" fill="#14140F"/>
+  <g transform="translate(230,120) scale(1)">
+    <use href="#mark-accent"/>
+  </g>
+  <text x="320" y="400" text-anchor="middle" class="display" font-size="72" fill="#EDEAE2">ORIGO</text>
+  <text x="320" y="438" text-anchor="middle" class="caption" font-size="16" fill="#8C8779">ESTÚDIO</text>
+
+  <!-- ============ CARD 2 — versão sobre fundo claro ============ -->
+  <rect x="620" y="60" width="520" height="460" rx="26" fill="#EDEAE2" stroke="#DAD5C9" stroke-width="1.5"/>
+  <g transform="translate(790,120) scale(1)">
+    <use href="#mark-ink"/>
+  </g>
+  <text x="880" y="400" text-anchor="middle" class="display" font-size="72" fill="#14140F">ORIGO</text>
+  <text x="880" y="438" text-anchor="middle" class="caption" font-size="16" fill="#8C8779">ESTÚDIO</text>
+
+  <!-- ============ RODAPÉ — ícone isolado em 3 escalas ============ -->
+  <g transform="translate(90,600) scale(1.1)">
+    <use href="#mark-ink"/>
+  </g>
+  <g transform="translate(330,630) scale(0.62)">
+    <use href="#mark-ink"/>
+  </g>
+  <g transform="translate(470,650) scale(0.32)">
+    <use href="#mark-ink"/>
+  </g>
+
+  <text x="60" y="770" class="label" font-size="15" fill="#8C8779">ORIGO ESTÚDIO — ícone isolado, três escalas (o ponto fixo que vira movimento)</text>
+  <text x="60" y="798" class="label" font-size="13" fill="#B5B0A2">Ink #14140F · Paper #EDEAE2 · Sinal #FF3D1F · Tipografia Space Grotesk</text>
+</svg>
