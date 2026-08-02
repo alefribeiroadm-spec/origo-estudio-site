@@ -23,7 +23,18 @@
     { file: "loja-de-roupa.mp4", niche: "Loja de roupa", desc: "Vídeo de provador / coleção" },
     { file: "casas-de-show.mp4", niche: "Casa de show", desc: "Divulgação de line-up e evento" },
     { file: "clinica-odonto.mp4", niche: "Clínica odontológica", desc: "Vídeo institucional acolhedor" },
-    { file: "hamburgueria.mp4", niche: "Hamburgueria", desc: "Vídeo de produto e ambientação" }
+    { file: "garcons-brothers-filme.mp4", niche: "Hamburgueria", desc: "Filme completo de divulgação" },
+    { file: "samba-kgente.mp4", niche: "Grupo musical", desc: "Vídeo institucional de grupo de samba" },
+    { file: "dj-alef-cacador.mp4", niche: "Animação", desc: "Videoclipe animado" },
+    { file: "dj-alef-deep-house.mp4", niche: "Animação", desc: "Clipe musical animado" },
+    { file: "dunas-itaunas.mp4", niche: "Turismo", desc: "Dunas de Itaúnas, campanha de divulgação" },
+    { file: "ponte-madalena.mp4", niche: "Turismo", desc: "Point turístico, campanha de divulgação" },
+    { file: "zoo-marechal-floriano.mp4", niche: "Turismo", desc: "Zoológico municipal, campanha de visitação" },
+    { file: "marataizes.mp4", niche: "Turismo", desc: "Praia de Marataízes, campanha turística" },
+    { file: "drone-litoral.mp4", niche: "Turismo", desc: "Litoral ao amanhecer, vídeo aéreo" },
+    { file: "beija-flores-santa-teresa.mp4", niche: "Turismo", desc: "Ecoturismo, fauna de Santa Teresa" },
+    { file: "cafezal.mp4", niche: "Turismo / Agro", desc: "Rota do café, turismo rural" },
+    { file: "cena-urbana.mp4", niche: "Cinema", desc: "Cena cinematográfica urbana" }
   ];
 
   /* ============ NAV ============ */
