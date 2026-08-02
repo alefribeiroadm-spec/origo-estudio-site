@@ -35,9 +35,9 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">Origo Estúdio · Grande Vitória, ES</span>
+        <span class="eyebrow">Origo Estúdio · Vídeos ultra-realistas e animações</span>
         <h1>Vídeo profissional não precisa ser <em>complicado.</em><br>Nem caro.</h1>
-        <p class="lede">A gente produz vídeo pro seu negócio aparecer bonito nas redes — rápido, no estilo e nas cores da sua marca, por um preço que cabe no bolso de quem está começando.</p>
+        <p class="lede">Produzo vídeo ultra-realista ou animado pro seu negócio aparecer bonito nas redes — rápido, no estilo e nas cores da sua marca, por um preço que cabe no bolso de quem está começando.</p>
         <div class="hero-cta">
           <a href="#pedido" class="btn btn-primary">Pedir meu vídeo</a>
           <a href="#portfolio" class="btn btn-ghost-light">Ver exemplos</a>
@@ -96,7 +96,7 @@
       <div class="portfolio-grid" id="portfolioGrid">
         <!-- injected by JS -->
       </div>
-      <p class="portfolio-note">Essas peças são demonstrações de estilo produzidas pela Origo, não trabalhos encomendados por clientes reais — servem pra você ver o padrão de qualidade antes de pedir o seu.</p>
+      <p class="portfolio-note">Essas peças são demonstrações em estilo ultra-realista produzidas pela Origo, não trabalhos encomendados por clientes reais — servem pra você ver o padrão de qualidade antes de pedir o seu. Também faço vídeos animados; exemplos no <a href="https://www.instagram.com/origoestudiobr/" target="_blank" rel="noopener" style="color:var(--signal);">Instagram</a>.</p>
     </div>
   </section>
 
@@ -123,7 +123,7 @@
         <div class="service-card dark">
           <span class="service-kicker">Vídeos pra redes sociais</span>
           <h3>Cardápio de vídeos</h3>
-          <p class="desc">Escolha a duração e a quantidade. Quanto mais vídeo no pacote, menor o preço de cada peça. Pacote máximo de 15 vídeos por mês.</p>
+          <p class="desc">Ultra-realista ou animado — você escolhe o estilo. Depois é só definir a duração e a quantidade: quanto mais vídeo no pacote, menor o preço de cada peça. Pacote máximo de 15 vídeos por mês.</p>
           <table class="price-table">
             <thead>
               <tr><th>Pacote</th><th>20s</th><th>30s</th><th>1 min</th></tr>
@@ -187,6 +187,7 @@
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="obrigado.html">
           <input type="hidden" name="Tipo de pedido" id="tipoPedidoField" value="Vídeo pra redes sociais">
+          <input type="hidden" name="Estilo do vídeo" id="estiloField" value="Ultra-realista">
 
           <div>
             <div class="field" data-video-field>
@@ -206,6 +207,15 @@
                 <option>Igreja / evento religioso</option>
                 <option>Outro tipo de negócio</option>
               </select>
+            </div>
+
+            <div class="field" data-video-field>
+              <label>Estilo do vídeo</label>
+              <div class="chip-group" id="styleChips">
+                <button type="button" class="chip active" data-style="Ultra-realista">Ultra-realista</button>
+                <button type="button" class="chip" data-style="Animação">Animação</button>
+              </div>
+              <p class="hint">Ultra-realista parece filmagem de verdade. Animação tem estilo desenhado/ilustrado.</p>
             </div>
 
             <div class="field" data-video-field>
@@ -265,6 +275,7 @@
             <div class="summary-box" data-video-field>
               <span class="label">Total do pedido</span>
               <div class="price"><span id="summaryPrice">R$ 20</span> <small id="summaryPriceUnit">/ 1 vídeo de 20s</small></div>
+              <div class="summary-line"><span>Estilo</span><strong id="summaryStyle">Ultra-realista</strong></div>
               <div class="summary-line"><span>Duração</span><strong id="summaryDuration">20 segundos</strong></div>
               <div class="summary-line"><span>Quantidade</span><strong id="summaryQty">1 vídeo</strong></div>
               <div class="summary-line"><span>Preço por vídeo</span><strong id="summaryUnit">R$ 20,00</strong></div>

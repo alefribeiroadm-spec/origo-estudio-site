@@ -112,9 +112,24 @@
   /* ============ DURATION / QTY CHIPS ============ */
   var duration = 20;
   var qty = 1;
+  var style = "Ultra-realista";
 
+  var styleChips = document.querySelectorAll("#styleChips .chip");
   var durationChips = document.querySelectorAll("#durationChips .chip");
   var qtyChips = document.querySelectorAll("#qtyChips .chip");
+  var estiloField = document.getElementById("estiloField");
+  var summaryStyle = document.getElementById("summaryStyle");
+
+  styleChips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      styleChips.forEach(function (c) { c.classList.remove("active"); });
+      chip.classList.add("active");
+      style = chip.dataset.style;
+      estiloField.value = style;
+      summaryStyle.textContent = style;
+      updateWhatsappFallback();
+    });
+  });
 
   durationChips.forEach(function (chip) {
     chip.addEventListener("click", function () {
@@ -242,8 +257,10 @@
     var msg;
     if (currentTab === "video") {
       var total = PRICES[duration][qty];
+      var styleLabel = style === "Animação" ? "de animação" : "ultra-realista" + (qty > 1 ? "s" : "");
       msg = "Oi, Alef! Quero pedir " + qty + " vídeo" + (qty > 1 ? "s" : "") +
-        " de " + durationLabel(duration) + " (total " + money(total) + ") pra minha empresa.";
+        " " + styleLabel + " de " + durationLabel(duration) +
+        " (total " + money(total) + ") pra minha empresa.";
     } else {
       msg = "Oi, Alef! Quero um orçamento pra personalizar um site pro meu negócio.";
     }
