@@ -267,6 +267,70 @@
     waFallback.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
   }
 
+  /* ============ ENVIO DO PEDIDO -> WHATSAPP DIRETO ============ */
+  var orderForm = document.getElementById("orderForm");
+  function buildOrderWhatsAppMessage() {
+    var businessName = (orderForm.elements["Nome do negócio"].value || "").trim();
+    var clientName = (orderForm.elements["Seu nome"].value || "").trim();
+    var briefing = (orderForm.elements["Briefing"].value || "").trim();
+    var lines = [];
+
+    if (currentTab === "video") {
+      var total = PRICES[duration][qty];
+      var nicho = orderForm.elements["Tipo de negócio"].value;
+      lines.push("Oi, Alef! Acabei de fazer um pedido pelo site da Origo:");
+      lines.push("");
+      lines.push("Negócio: " + (businessName || "-") + " (" + nicho + ")");
+      lines.push("Estilo: " + style);
+      lines.push("Duração: " + durationLabel(duration));
+      lines.push("Quantidade: " + qty + " vídeo" + (qty > 1 ? "s" : ""));
+      lines.push("Total: " + money(total));
+      if (briefing) lines.push("Briefing: " + briefing);
+      lines.push("");
+      lines.push("Meu nome: " + (clientName || "-"));
+      lines.push("Já mando o comprovante do Pix e os anexos aqui.");
+    } else {
+      lines.push("Oi, Alef! Acabei de pedir um orçamento de personalização de site pelo seu site:");
+      lines.push("");
+      lines.push("Negócio: " + (businessName || "-"));
+      if (briefing) lines.push("O que preciso: " + briefing);
+      lines.push("");
+      lines.push("Meu nome: " + (clientName || "-"));
+    }
+    return lines.join("\n");
+  }
+
+  if (orderForm) {
+    orderForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var submitBtn = orderForm.querySelector("button[type=submit]");
+      var waUrl = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(buildOrderWhatsAppMessage());
+      var formData = new FormData(orderForm);
+      var redirected = false;
+
+      function goToWhatsapp() {
+        if (redirected) return;
+        redirected = true;
+        window.location.href = waUrl;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Enviando...";
+      }
+
+      // Envia o briefing e os anexos por e-mail em segundo plano (não bloqueia o redirecionamento)
+      fetch("https://formsubmit.co/ajax/alefribeiroadm@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      }).catch(function () {}).then(goToWhatsapp);
+
+      // Garante que o cliente vai pro WhatsApp mesmo se o envio do e-mail demorar ou falhar
+      setTimeout(goToWhatsapp, 6000);
+    });
+  }
+
   /* ============ INIT ============ */
   updateSummary();
 })();
