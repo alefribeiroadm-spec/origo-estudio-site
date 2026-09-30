@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  /* Terrosos quentes + um acento azul-elétrico */
+  --color-papel: #efe8dc;
+  --color-areia: #e3d6c0;
+  --color-argila: #cdb896;
+  --color-barro: #a8472a;
+  --color-terra: #2a211a;
+  --color-terra-suave: #6b5b4b;
+  --color-carvao: #1b1611;
+  --color-eletrico: #2447ff;
+  --color-eletrico-escuro: #1633d6;
+
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-grotesk), system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-papel);
+  color: var(--color-terra);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-eletrico);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-eletrico);
+  outline-offset: 3px;
+}
+
+@layer components {
+  .conteiner {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .sobrelinha {
+    @apply text-xs font-medium tracking-[0.18em] text-terra-suave uppercase;
+  }
+
+  .titulo {
+    @apply font-serif font-normal tracking-tight text-balance;
+  }
+
+  .botao {
+    @apply inline-flex items-center gap-2 rounded-full px-6 py-3 text-[15px] font-medium transition-colors;
+  }
+  .botao-principal {
+    @apply bg-eletrico text-white hover:bg-eletrico-escuro disabled:opacity-60;
+  }
+  .botao-contorno {
+    @apply border border-terra/25 hover:border-terra hover:bg-terra hover:text-papel;
+  }
+
+  .rotulo {
+    @apply block text-[15px] font-medium;
+  }
+  .entrada {
+    @apply w-full rounded-lg border border-terra/20 bg-white/60 px-4 py-3 text-base placeholder:text-terra-suave/60 focus:border-eletrico focus:bg-white focus:outline-none;
+  }
+
+  .opcao {
+    @apply cursor-pointer;
+  }
+  .opcao-corpo {
+    @apply block rounded-lg border border-terra/20 bg-white/40 px-3 py-3 text-center whitespace-nowrap text-[15px] transition-colors hover:border-terra/50;
+  }
+  .peer:checked + .opcao-corpo {
+    @apply border-eletrico bg-eletrico text-white;
+  }
+  .peer:focus-visible + .opcao-corpo {
+    outline: 2px solid var(--color-eletrico);
+    outline-offset: 3px;
+  }
+
+  /* Tratamento editorial da foto: fundo branco vira areia, cor puxa pro quente */
+  .foto-editorial {
+    filter: sepia(0.18) saturate(0.92) contrast(1.04);
+    mix-blend-mode: multiply;
+  }
+}
